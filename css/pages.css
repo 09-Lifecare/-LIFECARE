@@ -1,0 +1,211 @@
+/* ===== PAGES COMMON STYLES ===== */
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3a7bc8 100%);
+    color: white;
+    padding: 3rem var(--spacing-md);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    font-size: var(--font-size-large);
+    opacity: 0.9;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    margin-bottom: 3rem;
+}
+
+/* ===== FEATURES PAGE ===== */
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-box {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-box-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-box h3 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+.feature-box p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-box ul {
+    list-style: none;
+    color: var(--text-light);
+}
+
+.feature-box li {
+    padding: var(--spacing-sm) 0;
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.feature-box li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: 700;
+    margin-right: var(--spacing-sm);
+}
+
+/* ===== ABOUT PAGE ===== */
+
+.about-section {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.about-section h2 {
+    font-size: var(--font-size-xl);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.about-section h2:before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.about-section p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-form h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-info-box h3 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.contact-info-box p {
+    color: var(--text-light);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 2rem var(--spacing-md);
+    }
+
+    .page-header h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
